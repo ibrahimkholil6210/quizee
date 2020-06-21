@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Quizeee! Check your IQ</title>
+    <%- include('sheets.ejs'); %>
+</head>
+
+<body>
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-md-8">
+                <div class="form-inner quiz-inner">
+                    <h3 class="title">Quizee!</h3>
+                    <div id="quiz-container">
+                        <div id="question-container hide">
+                            <div id="question-element">Press Start Quiz!</div>
+                            <div id="answer-btn-container">
+                            </div>
+                        </div>
+                        <div id="quiz-control">
+                            <button type="button" id="start_btn" class="btn btn-outline-success">Start Quiz</button>
+                            <button type="button" id="next_btn" class="btn btn-outline-warning hide">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

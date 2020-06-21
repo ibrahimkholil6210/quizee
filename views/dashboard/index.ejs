@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Dashboard-Quizeee! Check your IQ</title>
+
+    <%- include('./sheets.ejs'); %>
+</head>
+
+<body>
+    <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+        <%- include('./partials/sidenav.ejs'); %>
+        <main class="bmd-layout-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Question</th>
+                                    <th scope="col">Option</th>
+                                    <th scope="col">answer</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% results.forEach(function(result,i){ %>
+                                <tr>
+                                    <th scope="row"><%= ++i %></th>
+                                    <td><%= result.question %></td>
+                                    <td><%= result.options %></td>
+                                    <td><%= parseInt(result.answer ) + 1 %></td>
+                                    <th><a href="/quize/detete/<%= result.id %>">Delete</a></th>
+                                </tr>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-copy">
+                            <p>&copy;2020 All Rights Are Reserved!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const getNavBtn = document.querySelector('.logout-nav');
+        getNavBtn.addEventListener('click', (e) => {
+            const getMenu = document.querySelector('.menu-toggle');
+            getMenu.classList.toggle('show-menu');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<header class="bmd-layout-header">
+    <div class="navbar navbar-light bg-faded">
+        <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-s2">
+            <span class="sr-only">Toggle drawer</span>
+            <i class="material-icons">menu</i>
+        </button>
+        <ul class="nav navbar-nav">
+            <li class="nav-item logout-nav">
+                <button class="btn bmd-btn-icon ">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <div class="menu-toggle">
+                    <a class="list-group-item" href="/admin/logout">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+<div id="dw-s2" class="bmd-layout-drawer bg-faded">
+    <header>
+        <a class="navbar-brand">Quizee!</a>
+    </header>
+    <ul class="list-group">
+        <a class="list-group-item" href="/admin/dashboard">List Quize</a>
+        <a class="list-group-item" href="/admin/dashboard/addquize">Add Quize</a>
+    </ul>
+</div>

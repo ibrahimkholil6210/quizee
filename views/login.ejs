@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Quizeee! Check your IQ</title>
+    <%- include('sheets.ejs'); %>
+
+</head>
+
+<body>
+    <div class="container custom-container h-100">
+        <div class="row-custom">
+            <div class="column">
+                <div class="form-inner">
+                    <h3 class="title">Login!</h3>
+                    <form action="/admin/login" method="post">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                aria-describedby="emailHelp" placeholder="Enter password">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/admin/register" class="btn btn-primary right float-right">Don't have any
+                                account?</a>
+                        </div>
+                        <% if(messages.error) { %>
+                        <div class="messages">
+                            <p><%= messages.error %></p>
+                        </div>
+                        <% } %>
+                    </form>
+                </div>
+            </div>
+            <div class="column">
+                <div class="info-card">
+                    <div class="info-header">
+                        <h3 class="title">Quizee!</h3>
+                    </div>
+                    <div class="info-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam perferendis magnam illo minima
+                            quibusdam nam? Doloribus optio,
+                            dolorem autem eos obcaecati consequatur. Quidem molestiae harum, nostrum inventore esse
+                            pariatur quos?</p>
+                    </div>
+                    <div class="info-link">
+                        <ul>
+                            <li><a href="javascript:void(0)"><span class="material-icons">perm_phone_msg</span>
+                                    0170000000</a></li>
+                            <li><a href="javascript:void(0)"><span class="material-icons">send</span>
+                                    mail.gmail.com</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-copy">
+                        <p>&copy;2020 All Rights Are Reserved!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

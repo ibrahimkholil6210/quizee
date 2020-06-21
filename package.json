@@ -1,0 +1,35 @@
+{
+  "name": "quizee",
+  "version": "1.0.0",
+  "description": "A simple quiz application. Made on top of vanilla javascript",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrahimkholil6210/laptophut.git"
+  },
+  "author": "your name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ibrahimkholil6210/laptophut/issues"
+  },
+  "homepage": "https://github.com/ibrahimkholil6210/laptophut#readme",
+  "keywords": [
+    "nodejs",
+    "javascript"
+  ]
+}
